@@ -13,3 +13,5 @@
   * По названию игры:page_with_curl:
 * Пользователь может просмотреть отзывы, оставить отзыв на сайте, редактировать или удалить его:bookmark_tabs:
 * Администратор может удалять игры:put_litter_in_its_place:, изменять цену:moneybag:, количество ключей:key:, добавлять новые игры(ключи).
+
+  ![Image](https://github.com/VladislavTolstopyatov/KeysToGames/blob/main/LogicalModel.png)
