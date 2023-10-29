@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeysToGames", "KeysToGames.csproj", "{1E1F7120-3CC0-4A31-A2A4-DC27D0ABC381}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeysToGames", "KeysToGames.csproj", "{1E1F7120-3CC0-4A31-A2A4-DC27D0ABC381}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeysToGames.BL", "..\KeysToGames.BL\KeysToGames.BL.csproj", "{C4718C51-BF69-4FD1-B1A2-221BE6F14D48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeysToGames.DataAccess", "..\KeysToGames.DataAccess\KeysToGames.DataAccess.csproj", "{B3A4E23D-2E3E-4118-B980-F86C04A12720}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{1E1F7120-3CC0-4A31-A2A4-DC27D0ABC381}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E1F7120-3CC0-4A31-A2A4-DC27D0ABC381}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E1F7120-3CC0-4A31-A2A4-DC27D0ABC381}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4718C51-BF69-4FD1-B1A2-221BE6F14D48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4718C51-BF69-4FD1-B1A2-221BE6F14D48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4718C51-BF69-4FD1-B1A2-221BE6F14D48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4718C51-BF69-4FD1-B1A2-221BE6F14D48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3A4E23D-2E3E-4118-B980-F86C04A12720}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3A4E23D-2E3E-4118-B980-F86C04A12720}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3A4E23D-2E3E-4118-B980-F86C04A12720}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3A4E23D-2E3E-4118-B980-F86C04A12720}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

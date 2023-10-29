@@ -1,0 +1,14 @@
+C:\Users\vladi\KeysToGames\KeysToGames.BL\bin\Debug\net7.0\KeysToGames.BL.exe
+C:\Users\vladi\KeysToGames\KeysToGames.BL\bin\Debug\net7.0\KeysToGames.BL.deps.json
+C:\Users\vladi\KeysToGames\KeysToGames.BL\bin\Debug\net7.0\KeysToGames.BL.runtimeconfig.json
+C:\Users\vladi\KeysToGames\KeysToGames.BL\bin\Debug\net7.0\KeysToGames.BL.dll
+C:\Users\vladi\KeysToGames\KeysToGames.BL\bin\Debug\net7.0\KeysToGames.BL.pdb
+C:\Users\vladi\KeysToGames\KeysToGames.BL\obj\Debug\net7.0\KeysToGames.BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vladi\KeysToGames\KeysToGames.BL\obj\Debug\net7.0\KeysToGames.BL.AssemblyInfoInputs.cache
+C:\Users\vladi\KeysToGames\KeysToGames.BL\obj\Debug\net7.0\KeysToGames.BL.AssemblyInfo.cs
+C:\Users\vladi\KeysToGames\KeysToGames.BL\obj\Debug\net7.0\KeysToGames.BL.csproj.CoreCompileInputs.cache
+C:\Users\vladi\KeysToGames\KeysToGames.BL\obj\Debug\net7.0\KeysToGames.BL.dll
+C:\Users\vladi\KeysToGames\KeysToGames.BL\obj\Debug\net7.0\refint\KeysToGames.BL.dll
+C:\Users\vladi\KeysToGames\KeysToGames.BL\obj\Debug\net7.0\KeysToGames.BL.pdb
+C:\Users\vladi\KeysToGames\KeysToGames.BL\obj\Debug\net7.0\KeysToGames.BL.genruntimeconfig.cache
+C:\Users\vladi\KeysToGames\KeysToGames.BL\obj\Debug\net7.0\ref\KeysToGames.BL.dll
