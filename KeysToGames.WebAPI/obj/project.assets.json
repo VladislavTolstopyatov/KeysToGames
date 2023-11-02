@@ -652,6 +652,29 @@
         "build": {
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
+      },
+      "KeysToGames.BL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "KeysToGames.Dataaccess": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/KeysToGames.BL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KeysToGames.BL.dll": {}
+        }
+      },
+      "KeysToGames.Dataaccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/KeysToGames.Dataaccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KeysToGames.Dataaccess.dll": {}
+        }
       }
     }
   },
@@ -1798,10 +1821,21 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "KeysToGames.BL/1.0.0": {
+      "type": "project",
+      "path": "../KeysToGames.BL/KeysToGames.BL.csproj",
+      "msbuildProject": "../KeysToGames.BL/KeysToGames.BL.csproj"
+    },
+    "KeysToGames.Dataaccess/1.0.0": {
+      "type": "project",
+      "path": "../KeysToGames.Dataaccess/KeysToGames.Dataaccess.csproj",
+      "msbuildProject": "../KeysToGames.Dataaccess/KeysToGames.Dataaccess.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "KeysToGames.BL >= 1.0.0",
       "Microsoft.AspNetCore.OpenApi >= 7.0.13",
       "Serilog >= 3.0.1",
       "Serilog.AspNetCore >= 7.0.0",
@@ -1843,7 +1877,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\vladi\\KeysToGames\\KeysToGames.BL\\KeysToGames.BL.csproj": {
+              "projectPath": "C:\\Users\\vladi\\KeysToGames\\KeysToGames.BL\\KeysToGames.BL.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

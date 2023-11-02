@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vladi\\KeysToGames\\KeysToGames.DataAccess\\KeysToGames.DataAccess.csproj",
+      "projectUniqueName": "C:\\Users\\vladi\\KeysToGames\\KeysToGames.Dataaccess\\KeysToGames.Dataaccess.csproj",
       "projectName": "KeysToGames.DataAccess",
-      "projectPath": "C:\\Users\\vladi\\KeysToGames\\KeysToGames.DataAccess\\KeysToGames.DataAccess.csproj",
+      "projectPath": "C:\\Users\\vladi\\KeysToGames\\KeysToGames.Dataaccess\\KeysToGames.Dataaccess.csproj",
       "packagesPath": "C:\\Users\\vladi\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\vladi\\KeysToGames\\KeysToGames.DataAccess\\obj\\",
       "projectStyle": "PackageReference",

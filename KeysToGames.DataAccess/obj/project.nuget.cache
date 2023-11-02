@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sdmX/kzlb06U8nwbcIOWkh2s9yfv/oxIgTbRE9/6kbrf/+M2QHRbwPmlQZwyjbTu/eV4Z0eJCyyBZm17wL9bdQ==",
+  "dgSpecHash": "L720slwPgteuUTDJ4Bb29CA7vfzyWQuuwBb5MCtRakGqI0SnTgbBFsEn8qvCID0PrhXal4A5EOk/vbbvG6+fbA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vladi\\KeysToGames\\KeysToGames.DataAccess\\KeysToGames.DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\vladi\\KeysToGames\\KeysToGames.Dataaccess\\KeysToGames.Dataaccess.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("KeysToGames.DataAccess")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("KeysToGames.Dataaccess")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("KeysToGames.DataAccess")]
-[assembly: System.Reflection.AssemblyTitleAttribute("KeysToGames.DataAccess")]
+[assembly: System.Reflection.AssemblyProductAttribute("KeysToGames.Dataaccess")]
+[assembly: System.Reflection.AssemblyTitleAttribute("KeysToGames.Dataaccess")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Создано классом WriteCodeFragment MSBuild.

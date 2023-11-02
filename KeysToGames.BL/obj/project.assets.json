@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "KeysToGames.Dataaccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/KeysToGames.Dataaccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/KeysToGames.Dataaccess.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "KeysToGames.Dataaccess/1.0.0": {
+      "type": "project",
+      "path": "../KeysToGames.Dataaccess/KeysToGames.Dataaccess.csproj",
+      "msbuildProject": "../KeysToGames.Dataaccess/KeysToGames.Dataaccess.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "KeysToGames.Dataaccess >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\vladi\\.nuget\\packages\\": {},
@@ -39,7 +58,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\vladi\\KeysToGames\\KeysToGames.Dataaccess\\KeysToGames.Dataaccess.csproj": {
+              "projectPath": "C:\\Users\\vladi\\KeysToGames\\KeysToGames.Dataaccess\\KeysToGames.Dataaccess.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
