@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\KeysToGames.Dataaccess\KeysToGames.DataAccess.csproj" />
+    <ProjectReference Include="..\KeysToGames.DataAccess\KeysToGames.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>
