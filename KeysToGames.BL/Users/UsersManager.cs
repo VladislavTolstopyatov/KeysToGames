@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿
+using AutoMapper;
 using KeysToGames.BL.Games.Entities;
 using KeysToGames.BL.Users.Entities;
 using KeysToGames.DataAccess;

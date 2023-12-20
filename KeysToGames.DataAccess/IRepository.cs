@@ -3,7 +3,7 @@ using System.Linq.Expressions;
 
 namespace KeysToGames.DataAccess
 {
-    public interface IRepository<T> where T : BaseEntity
+    public interface IRepository<T> where T: class, IBaseEntity
     {
         IEnumerable<T> GetAll();
 

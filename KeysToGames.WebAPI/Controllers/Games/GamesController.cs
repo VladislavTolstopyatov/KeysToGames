@@ -2,6 +2,7 @@
 using KeysToGames.BL.Games;
 using KeysToGames.BL.Games.Entities;
 using KeysToGames.Controllers.Games.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KeysToGames.Controllers.Games
@@ -23,6 +24,7 @@ namespace KeysToGames.Controllers.Games
             _logger = logger;
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult GetAllGames()
         {
@@ -34,7 +36,7 @@ namespace KeysToGames.Controllers.Games
             }); 
         }
 
-
+        [Authorize]
         [HttpGet]
         [Route("{id}")]
         public IActionResult GetGameDetails([FromRoute] Guid id)
@@ -53,6 +55,7 @@ namespace KeysToGames.Controllers.Games
             }
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult CreateGame([FromBody] CreateGameBody body)
         {
@@ -61,6 +64,7 @@ namespace KeysToGames.Controllers.Games
             return Ok(game);
         }
 
+        [Authorize]
         [HttpPut]
         [Route("{id}")]
         public IActionResult UpdateGameInfo([FromRoute] Guid id, UpdateGameBody body)
@@ -79,6 +83,7 @@ namespace KeysToGames.Controllers.Games
             }
         }
 
+        [Authorize]
         [HttpDelete]
         [Route("{id}")]
         public IActionResult DeleteGame([FromRoute] Guid id)
@@ -97,6 +102,7 @@ namespace KeysToGames.Controllers.Games
             }
         }
 
+        [Authorize]
         [HttpGet]
         [Route("filter")]
         public IActionResult GetFilteredGames([FromQuery] GameFilter filter)

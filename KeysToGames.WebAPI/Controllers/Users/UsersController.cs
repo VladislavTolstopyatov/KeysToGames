@@ -1,7 +1,11 @@
 ﻿using AutoMapper;
+using Azure.Core;
+using KeysToGames.BL.Auth;
+using KeysToGames.BL.Auth.Entities;
 using KeysToGames.BL.Users;
 using KeysToGames.BL.Users.Entities;
 using KeysToGames.Controllers.Users.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KeysToUsers.Controllers.Users
@@ -10,28 +14,53 @@ namespace KeysToUsers.Controllers.Users
     [Route("controller")]
     public class UsersController : ControllerBase
     {
-        // log in
-        // log out
 
+        private readonly IAuthProvider _authProvider;
         private readonly IUsersManager _usersManager;
         private readonly IUsersProvider _usersProvider;
         private readonly IMapper _mapper;
         private readonly ILogger _logger;
 
-        public UsersController(IUsersManager usersManager, IUsersProvider usersProvider, IMapper mapper, ILogger logger)
+        public UsersController(IUsersManager usersManager, IUsersProvider usersProvider, IMapper mapper, ILogger logger,IAuthProvider authProvider)
         {
             _usersManager = usersManager;
             _usersProvider = usersProvider;
             _mapper = mapper;
             _logger = logger;
+            _authProvider = authProvider;
+        }
+
+        [HttpGet]
+        [Route("login")]
+        public async Task<IActionResult> LoginUser([FromQuery] string login, [FromQuery] string password)
+        {
+            try
+            {
+                TokensResponse tokens = await _authProvider.AuthorizeUser(login, password);
+                return Ok(tokens);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpPost]
-        public IActionResult RegisterUser([FromBody] RegisterUserBody body)
+        [Route("register")]
+        public async Task<IActionResult> RegisterUser([FromBody] RegisterUserBody body)
         {
-            return Ok();
+            try
+            {
+                await _authProvider.RegisterUser(_mapper.Map<RegisterUserModel>(body));
+                return Ok();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult GetAllUsers()
         {
@@ -43,7 +72,7 @@ namespace KeysToUsers.Controllers.Users
             });
         }
 
-
+        [Authorize]
         [HttpGet]
         [Route("{id}")]
         public IActionResult GetUserDetails([FromRoute] Guid id)
@@ -62,6 +91,8 @@ namespace KeysToUsers.Controllers.Users
             }
         }
 
+
+        [Authorize]
         [HttpPut]
         [Route("{id}")]
         public IActionResult UpdateUserInfo([FromRoute] Guid id, UpdateUserBody body)
@@ -80,6 +111,7 @@ namespace KeysToUsers.Controllers.Users
             }
         }
 
+        [Authorize]
         [HttpDelete]
         [Route("{id}")]
         public IActionResult DeleteUser([FromRoute] Guid id)
@@ -98,6 +130,7 @@ namespace KeysToUsers.Controllers.Users
             }
         }
 
+        [Authorize]
         [HttpGet]
         [Route("filter")]
         public IActionResult GetFilteredUsers([FromQuery] UserFilter filter)

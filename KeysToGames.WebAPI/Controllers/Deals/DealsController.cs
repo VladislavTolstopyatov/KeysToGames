@@ -1,5 +1,6 @@
 ﻿using KeysToGames.Controllers.Deals.Entities;
 using KeysToGames.Controllers.Keys.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KeysToGames.Controllers.Deals
@@ -11,6 +12,8 @@ namespace KeysToGames.Controllers.Deals
 
         public DealsController() { }
 
+
+        [Authorize]
         [HttpGet]
         public IActionResult GetAllDeals()
         {
@@ -18,7 +21,7 @@ namespace KeysToGames.Controllers.Deals
             return Ok();
         }
 
-
+        [Authorize]
         [HttpGet]
         [Route("{id}")]
         public IActionResult GetDealDetails([FromRoute] Guid id)
@@ -26,12 +29,14 @@ namespace KeysToGames.Controllers.Deals
             return Ok();
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult CreateDeal([FromBody] CreateDealBody body)
         {
             return Ok();
         }
 
+        [Authorize]
         [HttpPut]
         [Route("{id}")]
         public IActionResult UpdateDealInfo([FromRoute] Guid id, UpdateDealBody body)
@@ -39,6 +44,7 @@ namespace KeysToGames.Controllers.Deals
             return Ok();
         }
 
+        [Authorize]
         [HttpDelete]
         [Route("{id}")]
         public IActionResult DeleteDeal([FromRoute] Guid id)

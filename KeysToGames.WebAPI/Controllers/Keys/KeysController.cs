@@ -1,5 +1,6 @@
 ﻿using KeysToGames.Controllers.Genres.Entities;
 using KeysToGames.Controllers.Keys.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KeysToGames.Controllers.Keys
@@ -11,6 +12,7 @@ namespace KeysToGames.Controllers.Keys
 
         public KeysController() { }
 
+        [Authorize]
         [HttpGet]
         public IActionResult GetAllKeys()
         {
@@ -18,7 +20,7 @@ namespace KeysToGames.Controllers.Keys
             return Ok();
         }
 
-
+        [Authorize]
         [HttpGet]
         [Route("{id}")]
         public IActionResult GetKeyDetails([FromRoute] Guid id)
@@ -26,12 +28,14 @@ namespace KeysToGames.Controllers.Keys
             return Ok();
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult CreateKey([FromBody] CreateKeyBody body)
         {
             return Ok();
         }
 
+        [Authorize]
         [HttpPut]
         [Route("{id}")]
         public IActionResult UpdateKeyInfo([FromRoute] Guid id, UpdateKeyBody body)
@@ -39,6 +43,7 @@ namespace KeysToGames.Controllers.Keys
             return Ok();
         }
 
+        [Authorize]
         [HttpDelete]
         [Route("{id}")]
         public IActionResult DeleteKey([FromRoute] Guid id)

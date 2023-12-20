@@ -8,6 +8,7 @@
         public static void ConfigureServices(IServiceCollection services)
         {
             services.AddEndpointsApiExplorer();
+            
             services.AddSwaggerGen();
         }
 

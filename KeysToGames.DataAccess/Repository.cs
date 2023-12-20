@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace KeysToGames.DataAccess
 {
-    public class Repository<T> : IRepository<T> where T : BaseEntity
+    public class Repository<T> : IRepository<T> where T : class, IBaseEntity
     {
         private readonly IDbContextFactory<KeysToGamesDbContext> _contextFactory;
         public Repository(IDbContextFactory<KeysToGamesDbContext> contextFactory) 

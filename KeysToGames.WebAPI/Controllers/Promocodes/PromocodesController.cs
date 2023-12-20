@@ -1,5 +1,6 @@
 ﻿using KeysToGames.Controllers.Genres.Entities;
 using KeysToGames.Controllers.Promocodes.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace KeysToGames.Controllers.Promocodes
@@ -10,6 +11,7 @@ namespace KeysToGames.Controllers.Promocodes
     {
         public PromocodesController() { }
 
+        [Authorize]
         [HttpGet]
         public IActionResult GetAllPromocodes()
         {
@@ -17,7 +19,7 @@ namespace KeysToGames.Controllers.Promocodes
             return Ok();
         }
 
-
+        [Authorize]
         [HttpGet]
         [Route("{id}")]
         public IActionResult GetPromocodeDetails([FromRoute] Guid id)
@@ -25,12 +27,14 @@ namespace KeysToGames.Controllers.Promocodes
             return Ok();
         }
 
+        [Authorize]
         [HttpPost]
         public IActionResult CreatePromocode([FromBody] CreatePromocodeBody body)
         {
             return Ok();
         }
 
+        [Authorize]
         [HttpPut]
         [Route("{id}")]
         public IActionResult UpdatePromocodeInfo([FromRoute] Guid id, UpdatePromocodeBody body)
@@ -38,6 +42,7 @@ namespace KeysToGames.Controllers.Promocodes
             return Ok();
         }
 
+        [Authorize]
         [HttpDelete]
         [Route("{id}")]
         public IActionResult DeletePromocode([FromRoute] Guid id)
