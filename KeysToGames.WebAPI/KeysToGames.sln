@@ -13,7 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{83B16205
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeysToGames.UnitTests", "..\KeysToGames.UnitTests\KeysToGames.UnitTests.csproj", "{95501D05-3DF4-414D-BA67-AB94630BC3B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeysToGames.BL.UnitTests", "..\KeysToGames.BL.UnitTests\KeysToGames.BL.UnitTests.csproj", "{C6385C49-FE01-40A5-957A-D81763A79A0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KeysToGames.BL.UnitTests", "..\KeysToGames.BL.UnitTests\KeysToGames.BL.UnitTests.csproj", "{C6385C49-FE01-40A5-957A-D81763A79A0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeysToGames.Service.UnitTests", "..\KeysToGames.Service.UnitTests\KeysToGames.Service.UnitTests.csproj", "{B7676088-D170-4794-B7EF-EF040DD31257}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{C6385C49-FE01-40A5-957A-D81763A79A0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6385C49-FE01-40A5-957A-D81763A79A0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6385C49-FE01-40A5-957A-D81763A79A0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7676088-D170-4794-B7EF-EF040DD31257}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7676088-D170-4794-B7EF-EF040DD31257}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7676088-D170-4794-B7EF-EF040DD31257}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7676088-D170-4794-B7EF-EF040DD31257}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{95501D05-3DF4-414D-BA67-AB94630BC3B2} = {83B16205-D5DC-422E-A860-13BA8B0A96EC}
 		{C6385C49-FE01-40A5-957A-D81763A79A0E} = {83B16205-D5DC-422E-A860-13BA8B0A96EC}
+		{B7676088-D170-4794-B7EF-EF040DD31257} = {83B16205-D5DC-422E-A860-13BA8B0A96EC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D91240AA-96C1-447C-8263-A98B00F09949}

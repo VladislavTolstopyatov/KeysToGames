@@ -9,7 +9,11 @@ namespace KeysToGames.WebAPI.Settings
             //здесь будет чтение настроек приложения из конфига
             return new KeysToGamesSettings()
             {
-                KeysToGamesDbContextConnectionString = configuration.GetValue<string>("KeysToGamesDbContext")
+                ServiceUri = configuration.GetValue<Uri>("Uri"),
+                KeysToGamesDbContextConnectionString = configuration.GetValue<string>("KeysToGamesDbContext"),
+                IdentityServerUri = configuration.GetValue<string>("IdentityServerSettings:Uri"),
+                ClientId = configuration.GetValue<string>("IdentityServerSettings:ClientId"),
+                ClientSecret = configuration.GetValue<string>("IdentityServerSettings:ClientSecret"),
             };
         }
     }

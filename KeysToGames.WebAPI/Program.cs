@@ -16,7 +16,7 @@ DbContextConfigurator.ConfigureService(builder.Services, settings);
 SerilogConfigurator.ConfigureService(builder);
 SwaggerConfigurator.ConfigureServices(builder.Services);
 MapperConfigurator.ConfigureServices(builder.Services);
-ServicesConfigurator.ConfigureServices(builder.Services);
+ServicesConfigurator.ConfigureServices(builder.Services, settings);
 
 
 var app = builder.Build();
@@ -31,3 +31,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+public partial class Program { }

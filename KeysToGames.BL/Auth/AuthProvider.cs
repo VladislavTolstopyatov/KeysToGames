@@ -36,13 +36,13 @@ namespace KeysToGames.BL.Auth
             var user = await _userManager.FindByNameAsync(login); 
             if (user is null)
             {
-                throw new Exception(); //UserNotFoundException, BusinessLogicException(Code.UserNotFound);
+                throw new Exception("Пользователь не найден!"); //UserNotFoundException, BusinessLogicException(Code.UserNotFound);
             }
 
             var verificationPasswordResult = await _signInManager.CheckPasswordSignInAsync(user, password, false);
             if (!verificationPasswordResult.Succeeded)
             {
-                throw new Exception(); //AuthorizationException, BusinessLogicException(Code.PasswordOrLoginIsIncorrect);
+                throw new Exception("Неверный логин или пороль.Повторите попытку!"); //AuthorizationException, BusinessLogicException(Code.PasswordOrLoginIsIncorrect);
             }
 
             var client = _httpClientFactory.CreateClient();
@@ -65,7 +65,7 @@ namespace KeysToGames.BL.Auth
 
             if (tokenResponse.IsError)
             {
-                throw new Exception();
+                throw new Exception("Ошибка");
             }
 
             return new TokensResponse()
@@ -80,7 +80,7 @@ namespace KeysToGames.BL.Auth
             var user = await _userManager.FindByNameAsync(model.Login);
             if (!(user is null))
             {
-                throw new Exception();  //Пользователь уже есть
+                throw new Exception("Пользователь найден.Авторизуйтесь");  //Пользователь уже есть
             }
 
             UserEntity userEntity = new UserEntity()
@@ -91,7 +91,7 @@ namespace KeysToGames.BL.Auth
                 CardNumber = model.CardNumber
             };
 
-            var identityResult = _userManager.CreateAsync(user, model.Password);
+            var identityResult = _userManager.CreateAsync(userEntity, model.Password);
             if (!identityResult.IsCompletedSuccessfully)
             {
                 throw new Exception();

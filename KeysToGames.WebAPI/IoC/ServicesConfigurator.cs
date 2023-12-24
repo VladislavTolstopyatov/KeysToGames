@@ -1,12 +1,16 @@
-﻿using KeysToGames.BL.Games;
+﻿using KeysToGames.BL.Auth;
+using KeysToGames.BL.Games;
 using KeysToGames.BL.Users;
 using KeysToGames.DataAccess;
+using KeysToGames.DataAccess.Entities;
+using KeysToGames.WebAPI.Settings;
+using Microsoft.AspNetCore.Identity;
 
 namespace KeysToGames.IoC
 {
-    public static class ServicesConfigurator
+    public class ServicesConfigurator
     {
-        public static void ConfigureServices(IServiceCollection services) 
+        public static void ConfigureServices(IServiceCollection services,KeysToGamesSettings settings) 
         {
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
@@ -16,7 +20,15 @@ namespace KeysToGames.IoC
             services.AddScoped<IUsersProvider, UsersProvider>();
             services.AddScoped<IUsersManager, UsersManager>();
 
-            // services.AddSwaggerGen(c => c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First()));
+            services.AddScoped<IAuthProvider>(x =>
+    new AuthProvider(x.GetRequiredService<SignInManager<UserEntity>>(),
+        x.GetRequiredService<UserManager<UserEntity>>(),
+        x.GetRequiredService<IHttpClientFactory>(),
+        settings.IdentityServerUri,
+        settings.ClientId,
+        settings.ClientSecret));
+
+            services.AddSwaggerGen(c => c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First()));
         }
     }
 }
